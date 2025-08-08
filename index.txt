@@ -5,157 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CleanDrive - Lavage Auto à Domicile</title>
 <style>
-  /* RESET */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0d0f14;
-    color: #f1f5f9;
-    line-height: 1.5;
-  }
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    background: rgba(15, 23, 42, 0.95);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    z-index: 1000;
-  }
-  nav .logo {
-    font-weight: bold;
-    font-size: 1.7rem;
-    color: #3b82f6;
-  }
-  nav .links a {
-    color: #cbd5e1;
-    margin-left: 1.5rem;
-    text-decoration: none;
-    font-weight: 500;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  nav .links a:hover {
-    color: #60a5fa;
-  }
-  nav .lang-buttons button {
-    background: none;
-    border: none;
-    color: #cbd5e1;
-    font-size: 1.3rem;
-    margin-left: 0.8rem;
-    cursor: pointer;
-  }
-  nav .lang-buttons button:hover {
-    color: #60a5fa;
-  }
-  header {
-    height: 80vh;
-    background: url('https://i.postimg.cc/rsMPfhL1/78134252-lavage-de-voitures-blue-background-concept-mosa-que-th-me-du-v-hicule-de-nettoyage.jpg') no-repeat center center/cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 4rem;
-  }
-  header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0,0,0,0.6);
-  }
-  .hero-text {
-    position: relative;
-    text-align: center;
-    z-index: 1;
-  }
-  .hero-text h1 {
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 1rem;
-  }
-  .hero-text p {
-    font-size: 1.3rem;
-    color: #cbd5e1;
-  }
-  section {
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
-  h2 {
-    color: #60a5fa;
-    margin-bottom: 1rem;
-    border-bottom: 3px solid #3b82f6;
-    display: inline-block;
-    padding-bottom: 0.3rem;
-  }
-  .card {
-    background: #1e293b;
-    border-radius: 1rem;
-    padding: 1.8rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  }
-  .btn {
-    background: linear-gradient(90deg, #2563eb, #3b82f6);
-    color: white;
-    font-weight: bold;
-    padding: 0.8rem 1.6rem;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 1rem;
-    transition: background 0.3s ease;
-  }
-  .btn:hover {
-    background: linear-gradient(90deg, #1d4ed8, #2563eb);
-  }
-  label {
-    display: block;
-    margin-bottom: 0.3rem;
-    color: #cbd5e1;
-  }
-  input, select {
-    width: 100%;
-    padding: 0.6rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #334155;
-    color: white;
-  }
-  footer {
-    background: #0f172a;
-    text-align: center;
-    color: #94a3b8;
-    padding: 1rem;
-  }
-  /* Bouton appel mobile */
-  .call-button {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    background-color: #10b981;
-    color: white;
-    padding: 0.8rem 1.2rem;
-    border-radius: 30px;
-    font-weight: bold;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    text-decoration: none;
-    z-index: 999;
-  }
-  /* Responsive */
-  @media (max-width: 600px) {
-    .hero-text h1 {
-      font-size: 2rem;
-    }
-    nav .links a {
-      margin-left: 1rem;
-    }
-  }
+  * {margin: 0; padding: 0; box-sizing: border-box;}
+  body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0d0f14; color: #f1f5f9; line-height: 1.5;}
+  nav {position: fixed; top: 0; left: 0; right: 0; background: rgba(15, 23, 42, 0.95); display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; z-index: 1000;}
+  nav .logo {font-weight: bold; font-size: 1.7rem; color: #3b82f6;}
+  nav .links a {color: #cbd5e1; margin-left: 1.5rem; text-decoration: none; font-weight: 500; transition: color 0.3s ease;}
+  nav .links a:hover {color: #60a5fa;}
+  nav .lang-buttons button {background: none; border: none; color: #cbd5e1; font-size: 1.3rem; margin-left: 0.8rem; cursor: pointer;}
+  nav .lang-buttons button:hover {color: #60a5fa;}
+  header {height: 80vh; background: url('https://i.postimg.cc/rsMPfhL1/78134252-lavage-de-voitures-blue-background-concept-mosa-que-th-me-du-v-hicule-de-nettoyage.jpg') no-repeat center/cover; position: relative; display: flex; justify-content: center; align-items: center; padding-top: 4rem;}
+  header::before {content: ""; position: absolute; inset: 0; background-color: rgba(0,0,0,0.6);}
+  .hero-text {position: relative; text-align: center; z-index: 1;}
+  .hero-text h1 {font-size: 3rem; color: white; margin-bottom: 1rem;}
+  .hero-text p {font-size: 1.3rem; color: #cbd5e1;}
+  section {max-width: 1000px; margin: 3rem auto; padding: 0 1rem;}
+  h2 {color: #60a5fa; margin-bottom: 1rem; border-bottom: 3px solid #3b82f6; display: inline-block; padding-bottom: 0.3rem;}
+  .card {background: #1e293b; border-radius: 1rem; padding: 1.8rem; margin-bottom: 2rem; box-shadow: 0 0 15px rgba(0,0,0,0.5);}
+  .btn {background: linear-gradient(90deg, #2563eb, #3b82f6); color: white; font-weight: bold; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; display: inline-block; margin-top: 1rem; transition: background 0.3s ease;}
+  .btn:hover {background: linear-gradient(90deg, #1d4ed8, #2563eb);}
+  label {display: block; margin-bottom: 0.3rem; color: #cbd5e1;}
+  input, select {width: 100%; padding: 0.6rem; border: none; border-radius: 0.5rem; background-color: #334155; color: white;}
+  footer {background: #0f172a; text-align: center; color: #94a3b8; padding: 1rem;}
+  .call-button {position: fixed; bottom: 15px; right: 15px; background-color: #10b981; color: white; padding: 0.8rem 1.2rem; border-radius: 30px; font-weight: bold; box-shadow: 0 0 10px rgba(0,0,0,0.4); text-decoration: none; z-index: 999;}
+  @media (max-width: 600px) {.hero-text h1 {font-size: 2rem;} nav .links a {margin-left: 1rem;}}
 </style>
 </head>
 <body>
@@ -242,76 +114,21 @@
 
 <script>
   const translations = {
-    fr: {
-      nav_services: "Nos services",
-      nav_reservation: "Réserver",
-      hero_title: "Lavage auto à domicile",
-      hero_desc: "Rapide, Pratique, Professionnel – Où que vous soyez !",
-      services_title: "Nos Services",
-      ext_wash: "Lavage extérieur",
-      int_wash: "Lavage intérieur",
-      full_wash: "Lavage complet",
-      carpet: "Moquette / tapis",
-      on_demand: "sur demande",
-      reservation_title: "Réserver maintenant",
-      name_label: "Nom complet :",
-      date_label: "Date souhaitée :",
-      service_label: "Type de service :",
-      time_label: "Créneau horaire :",
-      whatsapp_btn: "Réserver via WhatsApp",
-      contact_title: "Nous contacter"
-    },
-    en: {
-      nav_services: "Services",
-      nav_reservation: "Book now",
-      hero_title: "Mobile Car Wash",
-      hero_desc: "Fast, convenient, professional – wherever you are.",
-      services_title: "Our Services",
-      ext_wash: "Exterior wash",
-      int_wash: "Interior wash",
-      full_wash: "Full wash",
-      carpet: "Carpet / mats",
-      on_demand: "on request",
-      reservation_title: "Book now",
-      name_label: "Full Name:",
-      date_label: "Preferred date:",
-      service_label: "Service type:",
-      time_label: "Time slot:",
-      whatsapp_btn: "Book via WhatsApp",
-      contact_title: "Contact us"
-    },
-    ar: {
-      nav_services: "الخدمات",
-      nav_reservation: "الحجز",
-      hero_title: "غسيل سيارات متنقل",
-      hero_desc: "سريع، مريح، احترافي – أينما كنت.",
-      services_title: "خدماتنا",
-      ext_wash: "غسيل خارجي",
-      int_wash: "غسيل داخلي",
-      full_wash: "غسيل كامل",
-      carpet: "السجاد / الحصائر",
-      on_demand: "حسب الطلب",
-      reservation_title: "احجز الآن",
-      name_label: "الاسم الكامل:",
-      date_label: "التاريخ المطلوب:",
-      service_label: "نوع الخدمة:",
-      time_label: "الفترة الزمنية:",
-      whatsapp_btn: "احجز عبر واتساب",
-      contact_title: "اتصل بنا"
-    }
+    fr: {nav_services: "Nos services", nav_reservation: "Réserver", hero_title: "Lavage auto à domicile", hero_desc: "Rapide, Pratique, Professionnel – Où que vous soyez !", services_title: "Nos Services", ext_wash: "Lavage extérieur", int_wash: "Lavage intérieur", full_wash: "Lavage complet", carpet: "Moquette / tapis", on_demand: "sur demande", reservation_title: "Réserver maintenant", name_label: "Nom complet :", date_label: "Date souhaitée :", service_label: "Type de service :", time_label: "Créneau horaire :", whatsapp_btn: "Réserver via WhatsApp", contact_title: "Nous contacter"},
+    en: {nav_services: "Services", nav_reservation: "Book now", hero_title: "Mobile Car Wash", hero_desc: "Fast, convenient, professional – wherever you are.", services_title: "Our Services", ext_wash: "Exterior wash", int_wash: "Interior wash", full_wash: "Full wash", carpet: "Carpet / mats", on_demand: "on request", reservation_title: "Book now", name_label: "Full Name:", date_label: "Preferred date:", service_label: "Service type:", time_label: "Time slot:", whatsapp_btn: "Book via WhatsApp", contact_title: "Contact us"},
+    ar: {nav_services: "الخدمات", nav_reservation: "الحجز", hero_title: "غسيل سيارات متنقل", hero_desc: "سريع، مريح، احترافي – أينما كنت.", services_title: "خدماتنا", ext_wash: "غسيل خارجي", int_wash: "غسيل داخلي", full_wash: "غسيل كامل", carpet: "السجاد / الحصائر", on_demand: "حسب الطلب", reservation_title: "احجز الآن", name_label: "الاسم الكامل:", date_label: "التاريخ المطلوب:", service_label: "نوع الخدمة:", time_label: "الفترة الزمنية:", whatsapp_btn: "احجز عبر واتساب", contact_title: "اتصل بنا"}
   };
 
   function setLang(lang) {
     const t = translations[lang];
     document.documentElement.lang = lang;
-
     for (const key in t) {
       const el = document.querySelector(`[data-key="${key}"]`);
       if (el) el.innerText = t[key];
     }
   }
 
-  setLang('fr'); // Langue par défaut
+  setLang('fr');
 
   function sendToWhatsapp(e) {
     e.preventDefault();
@@ -319,12 +136,7 @@
     const date = document.getElementById('date').value;
     const service = document.getElementById('service').value;
     const slot = document.getElementById('slot').value;
-
-    if(!name || !date || !service || !slot) {
-      alert('Veuillez remplir tous les champs.');
-      return;
-    }
-
+    if(!name || !date || !service || !slot) {alert('Veuillez remplir tous les champs.'); return;}
     const msg = `Bonjour, je souhaite réserver un lavage CleanDrive.\nNom : ${name}\nDate : ${date}\nService : ${service}\nCréneau : ${slot}`;
     const url = `https://wa.me/21652552112?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
